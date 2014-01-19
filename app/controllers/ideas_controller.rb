@@ -19,12 +19,16 @@ class IdeasController < ApplicationController
   end
 
   def create
-    @idea = Idea.create(idea_params)
+    if @idea = Idea.create(idea_params)
+      @include_add_link = true
 
-    @idea.id > 1 ? @include_prev_link = true : @include_prev_link = false
-    @idea.id == Idea.last.id ? @include_next_link = false : @include_next_link = true
+      @idea.id > 1 ? @include_prev_link = true : @include_prev_link = false
+      @idea.id == Idea.last.id ? @include_next_link = false : @include_next_link = true
 
-    render :index
+      render :index
+    else
+      redirect_to root_url
+    end
   end
 private
   def idea_params
