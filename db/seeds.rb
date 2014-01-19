@@ -18,7 +18,23 @@ Duration.create(duration: '1 to 2 hours')
 Duration.create(duration: '2 to 3 hours')
 Duration.create(duration: '4 + hours')
 
-Stops.create(stop_range: '1')
-Stops.create(stop_range: '2')
-Stops.create(stop_range: '3')
-Stops.create(stop_range: '4+')
+Destination.create(destinations: '1')
+Destination.create(destinations: '2')
+Destination.create(destinations: '3')
+Destination.create(destinations: '4+')
+
+Idea.create(description: 'Dress in nice clothes with your swim suit on underneath. Go to the 4th floor of the JW Marriot and sneak in to the hot tub and steam room.',
+            price_range_id: 1,
+            duration_id: 3
+            destination_id: 3,
+            location_id: 1)
+Idea.create(description: 'Go to Blandford nature center and immerse yourself in outdoorsy stuff. Have a picnic in Aman park afterwards.',
+            price_range_id: 1,
+            duration_id: 3
+            destination_id: 3,
+            location_id: 1)
+Idea.create(description: 'Head to Gerald R Ford Museum and sit in the situation room. Pretend you are the president you have to address the nation regarding a meteor that is about to take out the world.',
+            price_range_id: 1,
+            duration_id: 3
+            destination_id: 3,
+            location_id: 1)
