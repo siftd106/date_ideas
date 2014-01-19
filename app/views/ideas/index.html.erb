@@ -13,7 +13,7 @@
       <% if @include_prev_link %>
         <%= link_to ideas_url(prev_idea_id: @idea.id, prev: true) do %>
           <button class='btn btn-default'>
-            <img src="/assets/image-left.png" />
+            <img src="image-left.png" />
           </button>
         <% end %>
       <% end %>
@@ -22,7 +22,7 @@
       <% if @include_next_link %>
         <%= link_to ideas_url(prev_idea_id: @idea.id, next: true) do %>
           <button class='btn btn-default pull-right'>
-            <img src="/assets/image-right.png" />
+            <img src="image-right.png" />
           </button>
         <% end %>
       <% end %>
