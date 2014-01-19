@@ -1,7 +1,12 @@
 
 body {
   padding-top: 70px;
-  header {
-    background-color: orange;
+  div.main{
+    div.container{
+      width: 400px;
+    }
+    header {
+      background-color: orange;
+    }
   }
 }
