@@ -19,8 +19,15 @@ class IdeasController < ApplicationController
   end
 
   def create
-    @idea = Idea.create(params[:idea])
+    @idea = Idea.create(idea_params)
 
-    redirect_to root_url
+    @idea.id > 1 ? @include_prev_link = true : @include_prev_link = false
+    @idea.id == Idea.last.id ? @include_next_link = false : @include_next_link = true
+
+    render :index
+  end
+private
+  def idea_params
+    params.require(:idea).permit(:description, :duration_id, :destination_id, :price_id)
   end
 end
