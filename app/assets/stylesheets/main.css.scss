@@ -2,13 +2,16 @@
 body {
   padding-top: 70px;
   header.header{
-    h3.header{
-      text-align: center;
+    div.container{
+      width: 480px;
+      h3.header{
+        // text-align: center;
+      }
     }
   }
   div.main{
     div.container{
-      width: 400px;
+      width: 460px;
     }
     header {
       background-color: orange;

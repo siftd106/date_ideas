@@ -1,5 +1,20 @@
 <header class='header navbar navbar-fixed-top'>
   <div class='container'>
-    <h3 class='header'>Awesome Date Ideas</h3>
+    <div class='row'>
+      <!-- <h3 class='header'>Awesome Date Ideas</h3> -->
+      <!-- <button class='pull-right'>Add</button> -->
+      <div class='navbar-header'>
+        <%= link_to root_url, class: 'navbar-brand' do %>
+          Awesome Date Ideas
+        <% end %>
+      </div>
+      <% if @include_add_link %>
+        <%= link_to new_idea_url, class: 'nav navbar-nav navbar-right' do %>
+          <button class='btn btn-default'>
+              <img src="/assets/plus.png" />
+          </button>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </header>
