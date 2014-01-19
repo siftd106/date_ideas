@@ -8,13 +8,15 @@
           Awesome Date Ideas
         <% end %>
       </div>
-      <% if @include_add_link %>
-        <%= link_to new_idea_url, class: 'nav navbar-nav navbar-right' do %>
-          <button class='btn btn-default btn-primary'>
-              <%= image_tag 'plus.png' %>
-          </button>
+      <nav class='navbar-collapse collapse'>
+        <% if @include_add_link %>
+          <%= link_to new_idea_url, class: 'nav navbar-nav navbar-right' do %>
+            <button class='btn btn-default btn-primary'>
+              Add my Awesome Idea
+            </button>
+          <% end %>
         <% end %>
-      <% end %>
+      </nav>
     </div>
   </div>
 </header>
