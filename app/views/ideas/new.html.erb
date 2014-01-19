@@ -5,19 +5,19 @@
       <%= f.text_area :description %> 
     </div>
     <div class='form-group'>
-      <%= f.label :duration_id, 'Desinations:' %>
+      <%= f.label :duration_id, 'Duration of Time: ' %>
       <%= f.select :duration_id,
                    options_from_collection_for_select(Duration.all, :id, :duration),
                    { include_blank: true } %>
     </div>
     <div class='form-group'>
-      <%= f.label :destination_id, '# of Destination:' %>
+      <%= f.label :destination_id, '# of Destination: ' %>
       <%= f.select :destination_id,
                    options_from_collection_for_select(Destination.all, :id, :destinations),
                    { include_blank: true } %>
     </div>
     <div class='form-group'>
-      <%= f.label :price_id, 'Price Range:' %>
+      <%= f.label :price_id, 'Price Range: ' %>
       <%= f.select :price_id,
                    options_from_collection_for_select(Price.all, :id, :price_range),
                    { include_blank: true } %>
