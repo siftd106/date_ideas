@@ -10,8 +10,8 @@
   </div>
   <div class='row'>
     <div class='col-md-6 col-xs-6'>
-      <% if @include_prev_link %>
-        <%= link_to ideas_url(prev_idea_id: @idea.id, prev: true) do %>
+      <% if prev_idea = @idea.prev_idea %>
+        <%= link_to idea_url(prev_idea) do %>
           <button class='btn btn-default btn-primary'>
             <%= image_tag 'image-left.png' %>
           </button>
@@ -19,8 +19,8 @@
       <% end %>
     </div>
     <div class='col-md-6 col-xs-6'>
-      <% if @include_next_link %>
-        <%= link_to ideas_url(prev_idea_id: @idea.id, next: true) do %>
+      <% if next_idea = @idea.next_idea %>
+        <%= link_to idea_url(next_idea) do %>
           <button class='btn btn-default btn-primary pull-right'>
             <%= image_tag 'image-right.png' %>
           </button>

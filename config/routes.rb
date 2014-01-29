@@ -5,7 +5,7 @@ DateIdeas::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
 
-  resources :ideas, only: [:index, :new, :create]
+  resources :ideas, only: [:show, :new, :create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
