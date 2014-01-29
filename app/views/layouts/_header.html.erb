@@ -9,12 +9,10 @@
         <% end %>
       </div>
       <nav class='navbar-collapse collapse'>
-        <% if @include_add_link %>
-          <%= link_to new_idea_url, class: 'nav navbar-nav navbar-right' do %>
-            <button class='btn btn-default btn-primary'>
-              Add my Awesome Idea
-            </button>
-          <% end %>
+        <%= link_to new_idea_url, class: 'nav navbar-nav navbar-right' do %>
+          <button class='btn btn-default btn-primary'>
+            Add my Awesome Idea
+          </button>
         <% end %>
       </nav>
     </div>
